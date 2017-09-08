@@ -1,0 +1,12 @@
+Atividade
+
+Criar uma landpage com as principais funcionalidades do meu projeto final;
+Permita ao usuário, por meio de um formulário, informar um e-mail, salvando-o no banco, para uso posterior;
+
+https://bootstrapmaster.com/free-bootstrap-templates
+https://startbootstrap.com/template-categories/all
+https://www.criative-tim.com/bootstrap-themes/free
+
+
+Modelo de template de landpage
+https://blackrockdigital.github.io/startbootstrap-business-casual/
