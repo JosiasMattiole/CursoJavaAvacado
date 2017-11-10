@@ -5,3 +5,6 @@
 /webschool/webschool-web/target/
 /webschool/webschool-ear/target/
 /landpage/target/
+FrontEnd/calculaIMC/node_modules/.bin/acorn
+FrontEnd/calculaIMC/node_modules/.bin/acorn.cmd
+FrontEnd/calculaIMC/node_modules/.bin/ansi-html

@@ -1,4 +1,4 @@
-var calculaIMC = require('./calculaIMC');
+import calculaIMC from './calculaIMC';
 
 var nome = document.getElementById('nome');
 var peso = document.getElementById('peso');
