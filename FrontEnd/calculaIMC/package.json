@@ -1,0 +1,14 @@
+{
+  "name": "calculaimc",
+  "version": "1.0.0",
+  "description": "Calculo do IMC",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "author": "Josias Florentina",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}

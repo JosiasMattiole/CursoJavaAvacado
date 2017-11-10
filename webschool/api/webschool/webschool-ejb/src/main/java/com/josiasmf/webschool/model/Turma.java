@@ -1,8 +1,10 @@
 package com.josiasmf.webschool.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import static javax.persistence.CascadeType.ALL;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -34,8 +36,8 @@ public class Turma implements Serializable, Entidade{
     @Column(name = "DESCRICAO", length = 100, nullable = false)
     private String descricao;
     
-    @OneToMany(mappedBy = "turma", fetch = FetchType.EAGER)
-    private List<Aluno> alunos;
+    @OneToMany(cascade = ALL, mappedBy = "turma", fetch = FetchType.LAZY)
+    private List<Aluno> alunos = new ArrayList<>();
     
     @Override
     public Long getId() {
