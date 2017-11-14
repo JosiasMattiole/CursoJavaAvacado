@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div ng-controller="CalculoIMCController as vm">
+        <h2>{{vm.titulo}}</h2>
+        <form >
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="control-label col-sm-2">Nome</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" ng-model="vm.pessoa.nome">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="" class="control-label col-sm-2">Peso</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" ng-model="vm.pessoa.peso">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="" class="control-label col-sm-2">Altura</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" ng-model="vm.pessoa.altura">
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn-primary">
+                <button type="button" ng-click="vm.submit()">Calcular</button>
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+    <script src="indexController.js"></script>
+</body>
+</html>
