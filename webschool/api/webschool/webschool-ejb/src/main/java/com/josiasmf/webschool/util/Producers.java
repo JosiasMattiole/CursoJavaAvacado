@@ -1,9 +1,6 @@
 package com.josiasmf.webschool.util;
 
 import com.josiasmf.webschool.model.Entidade;
-import com.josiasmf.webschool.repository.AlunoRepository;
-import com.josiasmf.webschool.repository.GenericRepository;
-import com.josiasmf.webschool.repository.TurmaRepository;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.logging.Logger;
@@ -35,5 +32,15 @@ public class Producers {
         }
         Class<T> type = (Class<T>) args[0];
         return new GenericRepository(em, type);
+    }
+
+    @Produces
+    public <T extends Entidade> GenericService<T> produceService(InjectionPoint injectionPoint, EntityManager em) {
+        Type[] args = ((ParameterizedType) injectionPoint.getType()).getActualTypeArguments();
+        if (args.length == 0) {
+            throw new IllegalArgumentException("O GenericService precisa de um tipo");
+        }
+        Class<T> type = (Class<T>) args[0];
+        return new GenericService(em, type);
     }
 }
