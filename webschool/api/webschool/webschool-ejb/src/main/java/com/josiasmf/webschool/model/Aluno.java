@@ -38,7 +38,7 @@ public class Aluno implements Serializable, Entidade {
     @Column(name = "MATRICULA", length = 15, nullable = false)
     private String matricula;
     
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "turma_id")
     private Turma turma;
 

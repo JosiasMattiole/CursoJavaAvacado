@@ -1,7 +1,7 @@
-import ListController from './list.controller'
-import FormController from './form.controller'
+import AlunosController from './alunos.controller'
+import AlunoCadController from './aluno-cad.controller'
 
-import AlunoService from './alunoService'
+import AlunoService from './aluno.service'
 
 export const alunoConfig = (modulo) => {
   modulo.service('AlunoService', AlunoService);
@@ -17,21 +17,21 @@ export const alunoConfig = (modulo) => {
           }]
         })
         .state('aluno.list', {
-          template: require('@views/alunos/list.html'),
+          template: require('@views/alunos/alunos.html'),
           url: '/list',
-          controller: ListController,
+          controller: AlunosController,
           controllerAs: 'vm'
         })
         .state('aluno.new', {
-          template: require('@views/alunos/form.html'),
+          template: require('@views/alunos/aluno-cad.html'),
           url: '/new',
-          controller: FormController,
+          controller: AlunoCadController,
           controllerAs: 'vm'
         })
         .state('aluno.edit', {
-          template: require('@views/alunos/form.html'),
+          template: require('@views/alunos/aluno-cad.html'),
           url: '/{id}',
-          controller: FormController,
+          controller: AlunoCadController,
           controllerAs: 'vm'
         });
     }];

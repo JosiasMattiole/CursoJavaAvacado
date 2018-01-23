@@ -1,4 +1,4 @@
-export default class FormController {
+export default class AlunoCadController {
 
     constructor($stateParams, $state, AlunoService) {
         this.record = {};
@@ -26,4 +26,4 @@ export default class FormController {
     };
 };
 
-FormController.$inject = ['$stateParams', '$state', 'AlunoService'];
+AlunoCadController.$inject = ['$stateParams', '$state', 'AlunoService'];

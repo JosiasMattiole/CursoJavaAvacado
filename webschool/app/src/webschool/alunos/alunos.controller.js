@@ -1,4 +1,4 @@
-export default class ListController {
+export default class AlunosController {
 
     constructor(AlunoService) {
         this.filter = '';
@@ -25,4 +25,4 @@ export default class ListController {
     };
 };
 
-ListController.$inject = ['AlunoService'];
+AlunosController.$inject = ['AlunoService'];

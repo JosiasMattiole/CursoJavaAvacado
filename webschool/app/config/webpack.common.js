@@ -16,41 +16,39 @@ exports.config = {
     alias: {
       '@views': path.resolve(__dirname, './../src/webschool/views')
     }
-  },    
+  },
   module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['env']
-        },
-        exclude: /node_modules/
-      }, {
-        test: /\.html$/,
-        loader: 'raw-loader'
-      }, {
-        test: /\.(eot|svg)$/,
-        loader: 'file-loader?name=assets/[name].[hash:20].[ext]',
-      }, {
-        test: /\.(jpg|png|gif|otf|ttf|woff|woff2|cur|ani)$/,
-        loader: 'url-loader?name=assets/[name].[hash:20].[ext]&limit=10000',
-      }, {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader'
-        }),
-        include: /node_modules/
-      }, {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'sass-loader'
-        }),
-        include: /node_modules/
-      }
-    ]
+    rules: [{
+      test: /\.js$/,
+      loader: 'babel-loader',
+      options: {
+        presets: ['env']
+      },
+      exclude: /node_modules/
+    }, {
+      test: /\.html$/,
+      loader: 'raw-loader'
+    }, {
+      test: /\.(eot|svg)$/,
+      loader: 'file-loader?name=assets/[name].[hash:20].[ext]',
+    }, {
+      test: /\.(jpg|png|gif|otf|ttf|woff|woff2|cur|ani)$/,
+      loader: 'url-loader?name=assets/[name].[hash:20].[ext]&limit=10000',
+    }, {
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: 'css-loader'
+      }),
+      include: /node_modules/
+    }, {
+      test: /\.scss$/,
+      loader: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: 'sass-loader'
+      }),
+      include: /node_modules/
+    }]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -63,7 +61,7 @@ exports.config = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default']
-    })    
+    })
   ],
   devServer: {
     stats: 'minimal',

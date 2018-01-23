@@ -1,8 +1,8 @@
 package com.josiasmf.webschool.resource;
 
 import com.josiasmf.webschool.model.Aluno;
+import com.josiasmf.webschool.service.AlunoService;
 import com.josiasmf.webschool.util.GenericRepository;
-import com.josiasmf.webschool.util.GenericService;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -27,7 +27,7 @@ public class AlunoResource {
     private GenericRepository<Aluno> repository;
     
     @Inject
-    private GenericService<Aluno> service;
+    private AlunoService service;
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -65,7 +65,7 @@ public class AlunoResource {
     @DELETE
     @Path("/{id:[0-9][0-9]*}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response delete(@PathParam("id") long id) {
+    public Response delete(@PathParam("id") Long id) {
         service.delete(id);
         return Response.status(Response.Status.OK).entity(id).build();
     }

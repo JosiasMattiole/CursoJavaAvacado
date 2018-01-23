@@ -1,8 +1,8 @@
 package com.josiasmf.webschool.resource;
 
 import com.josiasmf.webschool.model.Turma;
+import com.josiasmf.webschool.service.TurmaService;
 import com.josiasmf.webschool.util.GenericRepository;
-import com.josiasmf.webschool.util.GenericService;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -24,7 +24,7 @@ import javax.ws.rs.core.Response;
 public class TurmaResource {
 
     @Inject
-    private GenericService<Turma> service;
+    private TurmaService service;
     
     @Inject
     private GenericRepository<Turma> repository;

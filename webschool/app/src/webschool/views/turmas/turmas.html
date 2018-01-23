@@ -1,0 +1,22 @@
+<div>
+    <a class="btn btn-outline-info" ui-sref="turma.new">Novo registro</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Ano escolar</th>
+                <th scope="col">Descrição</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="rec in vm.records">
+                <th scope="row">{{rec.anoEscolar}}</th>
+                <td>{{rec.descricao}}</td>
+                <td>
+                    <a class="btn btn-sm btn-success" ui-sref="turma.edit({id: rec.id})">Editar</a>
+                    <a class="btn btn-sm btn-danger" href="javascript:void()" ng-click="vm.excluir(rec.id)">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
