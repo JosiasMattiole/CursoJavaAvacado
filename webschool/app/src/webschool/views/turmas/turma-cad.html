@@ -3,27 +3,21 @@
         <h2 class="title">{{vm.title}}</h2>
         <form>
             <div class="form-group">
-                <label>Nome</label>
+                <label>Ano escolar</label>
                 <input type="text" 
-                       ng-model="vm.record.nome" 
+                       ng-model="vm.record.anoEscolar" 
                        class="form-control">
             </div>
             <div class="form-group">
-                <label>Matrícula</label>
+                <label>Descrição</label>
                 <input type="text" 
-                       ng-model="vm.record.matricula" 
-                       class="form-control">
-            </div>
-            <div class="form-group">
-                <label>Turma</label>
-                <input type="text" 
-                       ng-model="vm.record.turma.id" 
+                       ng-model="vm.record.descricao" 
                        class="form-control">
             </div>
             <button ng-click="vm.save()" 
                     type="button" 
                     class="btn btn-primary btn-sm">Gravar</button>
-            <a ui-sref="aluno.list" 
+            <a ui-sref="turma.list" 
                class="btn btn-danger btn-sm">Cancelar</a>
         </form>
     </div>
