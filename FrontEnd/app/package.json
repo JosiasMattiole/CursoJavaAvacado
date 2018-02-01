@@ -1,0 +1,11 @@
+{
+  "name": "testewebpack",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}

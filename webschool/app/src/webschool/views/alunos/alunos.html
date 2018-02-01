@@ -1,0 +1,24 @@
+<div>
+    <a class="btn btn-outline-info" ui-sref="aluno.new">Novo registro</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Matricula</th>
+                <th scope="col">Turma</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="rec in vm.records">
+                <th scope="row">{{rec.nome}}</th>
+                <td>{{rec.matricula}}</td>
+                <td>{{rec.turma.descricao}}</td>
+                <td>
+                    <a class="btn btn-sm btn-success" ui-sref="aluno.edit({id: rec.id})">Editar</a>
+                    <a class="btn btn-sm btn-danger" href="javascript:void()" ng-click="vm.excluir(rec.id)">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

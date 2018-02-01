@@ -2,7 +2,7 @@ package com.josiasmf.webschool.resource;
 
 import com.josiasmf.webschool.model.Aluno;
 import com.josiasmf.webschool.service.AlunoService;
-import java.util.Optional;
+import com.josiasmf.webschool.util.GenericRepository;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -24,19 +24,22 @@ import javax.ws.rs.core.Response;
 public class AlunoResource {
     
     @Inject
+    private GenericRepository<Aluno> repository;
+    
+    @Inject
     private AlunoService service;
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response findAll() {
-        return Response.ok(service.findAll()).build();
+        return Response.ok(repository.findAll()).build();
     }
 
     @GET
     @Path("/{id:[0-9][0-9]*}")
     @Produces(MediaType.APPLICATION_JSON)
     public Aluno findById(@PathParam("id") long id) {
-        Aluno aluno = service.findById(id);
+        Aluno aluno = repository.find(id);
         if (aluno == null) {
             throw new WebApplicationException(Response.Status.NOT_FOUND);
         }
@@ -47,7 +50,7 @@ public class AlunoResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response create(Aluno aluno) throws Exception {
-        service.create(aluno);
+        service.insert(aluno);
         return Response.status(Response.Status.CREATED).entity(aluno).build();
     }
     
@@ -62,12 +65,8 @@ public class AlunoResource {
     @DELETE
     @Path("/{id:[0-9][0-9]*}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response delete(@PathParam("id") long id) {
-        Aluno aluno = Optional.ofNullable(id)
-                .map(idAluno -> service.findById(idAluno))
-                .orElseThrow(WebApplicationException::new);
-        
-        service.delete(aluno);
-        return Response.status(Response.Status.OK).entity(aluno).build();
+    public Response delete(@PathParam("id") Long id) {
+        service.delete(id);
+        return Response.status(Response.Status.OK).entity(id).build();
     }
 }

@@ -1,7 +1,10 @@
-/atividadeArquetipo/atividadeArquetipo-ear/target/
-/atividadeArquetipo/atividadeArquetipo-ejb/target/
-/atividadeArquetipo/atividadeArquetipo-web/target/
-/webschool/webschool-ejb/target/
-/webschool/webschool-web/target/
-/webschool/webschool-ear/target/
-/landpage/target/
+atividadeArquetipo/atividadeArquetipo-ear/target/
+atividadeArquetipo/atividadeArquetipo-ejb/target/
+atividadeArquetipo/atividadeArquetipo-web/target/
+webschool/api/webschool/webschool-ear/target/
+webschool/api/webschool/webschool-ejb/target/
+webschool/api/webschool/webschool-web/target/
+webschool/app/node_modules/
+landpage/target/
+FrontEnd/calculaIMC/node_modules/
+*.cmd
