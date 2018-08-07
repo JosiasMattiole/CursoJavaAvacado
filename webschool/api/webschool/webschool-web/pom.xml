@@ -12,7 +12,7 @@
     <artifactId>webschool-web</artifactId>
     <packaging>war</packaging>
 
-    <name>webschool: WAR Module</name>
+    <name>webschool-war</name>
 
     <url>http://wildfly.org</url>
     <licenses>

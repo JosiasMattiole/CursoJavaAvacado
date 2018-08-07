@@ -12,7 +12,7 @@
     <artifactId>webschool-ejb</artifactId>
     <packaging>ejb</packaging>
 
-    <name>webschool: EJB Module</name>
+    <name>webschool-ejb</name>
 
     <url>http://wildfly.org</url>
     <licenses>

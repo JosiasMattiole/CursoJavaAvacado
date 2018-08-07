@@ -12,7 +12,7 @@
     <artifactId>webschool-ear</artifactId>
     <packaging>ear</packaging>
 
-    <name>webschool: EAR Module</name>
+    <name>webschool-ear</name>
 
     <url>http://wildfly.org</url>
     <licenses>
