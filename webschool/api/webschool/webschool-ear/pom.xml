@@ -28,7 +28,7 @@
         <!-- Depend on the ejb module and war so that we can package them -->
         <dependency>
             <groupId>com.josiasmf</groupId>
-            <artifactId>webschool-web</artifactId>
+            <artifactId>webschool-war</artifactId>
             <type>war</type>
         </dependency>
         <dependency>

@@ -1,0 +1,23 @@
+package com.josiasmf.webschool.model.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ *
+ * @author Josias Florentina
+ */
+public abstract class AbstractRepresentationBuilder<T, DTO, B> {
+
+    protected abstract T fromRepresentation(DTO dto, B builder);
+
+    protected abstract DTO toRepresentation(T t);
+
+    public List<DTO> toRepresentation(List<T> lista) {
+        final List<DTO> listaDto = new ArrayList<>();
+        lista.stream().forEach(registro -> {
+            listaDto.add(this.toRepresentation(registro));
+        });
+        return listaDto;
+    }
+}

@@ -58,6 +58,13 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- POSTGRESQL -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.5</version>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- Test scope dependencies -->
         <dependency>

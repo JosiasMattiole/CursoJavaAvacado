@@ -18,7 +18,7 @@
     </licenses>
     <modules>
         <module>webschool-ejb</module>
-        <module>webschool-web</module>
+        <module>webschool-war</module>
         <module>webschool-ear</module>
     </modules>
 
@@ -66,7 +66,7 @@
                 ourselves in every module -->
             <dependency>
                 <groupId>com.josiasmf</groupId>
-                <artifactId>webschool-web</artifactId>
+                <artifactId>webschool-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>
